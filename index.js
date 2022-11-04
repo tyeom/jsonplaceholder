@@ -18,7 +18,7 @@ json_server.listen(port, () => {
 
 // express 모듈 사용 json데이터 호스팅 [port : 7002]
 const fs = require('fs');
-fs.readFile('./data//data.json', 'utf8', (error, jsonFile) => {
+fs.readFile('/home/node/app/data/data.json', 'utf8', (error, jsonFile) => {
     if (error)
         return console.log(error);
     //console.log(jsonFile);

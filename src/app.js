@@ -37,14 +37,13 @@ module.exports = function(app, jsonData)
         res.send("Main");
     });
 
-    app.get('/posts/:id',function(req,res) {
-        const id = req.params.id;
-        console.log(id);
-        const filter = jsonData.posts.filter(it => it.id === parseInt(id));
-        res.send(filter);
+    app.get('/posts',function(req,res) {
+        res.send(jsonData);
     });
 
-    app.get('/jsonserver/:id',function(req,res) {
-        const data = require('../data.json')
+    app.get('/posts/:id',function(req,res) {
+        const id = req.params.id;
+        const filter = jsonData.posts.filter(it => it.id === parseInt(id));
+        res.send(filter);
     });
 }
