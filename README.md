@@ -2,8 +2,8 @@
 
 **A simple fake REST API for testing.**
 
-json-server 모듈 사용 json데이터 호스팅 [port : 8003]<br/>
-express 모듈 사용 json데이터 호스팅 [port : 8002]
+json-server 모듈 사용 json데이터 호스팅 [port : 7003]<br/>
+express 모듈 사용 json데이터 호스팅 [port : 7002]
 
 ***
 JSONPlaceholder is powered by [JSON Server](https://github.com/typicode/json-server).
