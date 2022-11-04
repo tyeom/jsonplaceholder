@@ -9,8 +9,8 @@ express 모듈 사용 json데이터 호스팅 [port : 8002]
 JSONPlaceholder is powered by [JSON Server](https://github.com/typicode/json-server).
 
 Demo site :<br/>
-- [JSON Server hosting - https://github.com/typicode/json-server](http://arong.info:7003).
-- [express hosting - https://github.com/typicode/json-server](http://arong.info:7002/posts/1).
+- [JSON Server hosting - http://arong.info:7003](http://arong.info:7003).
+- [express hosting - http://arong.info:7002/posts/1](http://arong.info:7002/posts/1).
 
 ### Get json data by all [json-server]
 ```
