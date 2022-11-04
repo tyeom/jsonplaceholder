@@ -8,15 +8,15 @@
  *
  */
 
-// json-server 모듈 사용 json데이터 호스팅 [port : 8003]
+// json-server 모듈 사용 json데이터 호스팅 [port : 7003]
 const json_server = require('./src/json_server');
-const port = process.env.PORT || 8003
+const port = process.env.PORT || 7003
 
 json_server.listen(port, () => {
   console.log('JSONPlaceholder listening on http://localhost:' + port)
 });
 
-// express 모듈 사용 json데이터 호스팅 [port : 8002]
+// express 모듈 사용 json데이터 호스팅 [port : 7002]
 const fs = require('fs');
 fs.readFile('./data//data.json', 'utf8', (error, jsonFile) => {
     if (error)
@@ -28,7 +28,7 @@ fs.readFile('./data//data.json', 'utf8', (error, jsonFile) => {
     const app = express();
     const router = require('./src/app')(app, jsonData);
     
-    app.set('port', process.env.PORT || 8002);
+    app.set('port', process.env.PORT || 7002);
     
     // Start Express
     const server = app.listen(app.get('port'), function(){
