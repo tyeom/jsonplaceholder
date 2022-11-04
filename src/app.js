@@ -9,7 +9,7 @@ const multer = require('multer');
 const storage_file = multer.diskStorage({
     destination: function(req, file, cb) {
         //cb(null, 'jsonplaceholder/upload/');
-        cb(null, './upload/');
+        cb(null, '/home/node/app/upload');
     },
 });
 // 파일 업로드 -> 5MB 제한
@@ -26,7 +26,7 @@ module.exports = function(app, jsonData)
 
     app.get('/filedownload',function(req,res) {
         const filename = req.query.filename;
-        const filePath = `./upload/${filename}`;
+        const filePath = `/home/node/app/upload/${filename}`;
 
         res.statusCode = 200;
         res.download(filePath);
