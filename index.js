@@ -5,6 +5,7 @@
  *            npm install decode-html
  *            npm install --save multer [express 파일 업로드]
  *            npm install json-server [json-server모듈, https://github.com/typicode/json-server]
+ *            npm install cors [크로스도메인 허용]
  *
  */
 
@@ -19,6 +20,7 @@ json_server.listen(port, () => {
 // express 모듈 사용 json데이터 호스팅 [port : 7002]
 const fs = require('fs');
 fs.readFile('/home/node/app/data/data.json', 'utf8', (error, jsonFile) => {
+//fs.readFile('./data/data.json', 'utf8', (error, jsonFile) => {
     if (error)
         return console.log(error);
     //console.log(jsonFile);

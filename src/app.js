@@ -1,5 +1,6 @@
 const jsonServer = require('json-server');
 const data = require('../data/data.json')
+const cors = require('cors');
 
 const moment = require('moment');
 // multer모듈 (for 파일업로드)
@@ -17,6 +18,8 @@ const fileUpload = multer({ storage: storage_file, limits: { fileSize: 5 * 1024 
 
 module.exports = function(app, jsonData)
 {
+    app.use(cors());
+
     app.post('/fileUpload', fileUpload.single('userfile'), function(req, res) {
         console.log(`[${moment().format('HH:mm:ss.SSS')}] 파일 업로드 완료`);
 
