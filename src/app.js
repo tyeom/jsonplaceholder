@@ -38,12 +38,12 @@ module.exports = function(app, jsonData)
     });
 
     app.get('/posts',function(req,res) {
-        res.send(jsonData);
+        res.json(jsonData);
     });
 
     app.get('/posts/:id',function(req,res) {
         const id = req.params.id;
         const filter = jsonData.posts.filter(it => it.id === parseInt(id));
-        res.send(filter);
+        res.json(filter);
     });
 }
